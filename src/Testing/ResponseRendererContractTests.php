@@ -38,7 +38,7 @@ trait ResponseRendererContractTests
         $step->slug = 'step-with-non-existent-template';
 
         $this->expectException(StepTemplateNotFoundException::class);
-        $this->expectErrorMessage('No template found for step [step-with-non-existent-template].');
+        $this->expectExceptionMessage('No template found for step [step-with-non-existent-template].');
 
         $this->makeRenderer()
             ->renderStep($step, $wizard, []);
